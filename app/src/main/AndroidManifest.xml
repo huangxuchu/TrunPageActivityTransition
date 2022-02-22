@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.learnactivitytransitionanimation">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LearnActivityTransitionAnimation.NoActionBar">
+        <activity
+            android:name=".model3.Mode3EndActivity"
+            android:exported="false" />
+        <activity android:name=".model3.Mode3StartActivity" />
+        <activity
+            android:name=".model2.Mode2EndActivity"
+            android:exported="true" />
+        <activity
+            android:name=".model2.Mode2StartActivity"
+            android:exported="true"
+            android:label="@string/title_activity_mode_two_start" />
+        <activity
+            android:name=".model1.Mode1StartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".model1.Mode1EndActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".model2.Mode2EndActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/comment_box"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:transitionName="comment"
+        app:layout_constraintBottom_toTopOf="@id/view_send_bg"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_dates"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_send_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="view_send_bg,iv_back,tv_send,et_content" />
+
+    <View
+        android:id="@+id/view_send_bg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/view_send_bg"
+        app:layout_constraintLeft_toLeftOf="@id/view_send_bg"
+        app:layout_constraintTop_toTopOf="@id/view_send_bg"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="64dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="发送"
+        app:layout_constraintBottom_toBottomOf="@id/view_send_bg"
+        app:layout_constraintRight_toRightOf="@id/view_send_bg"
+        app:layout_constraintTop_toTopOf="@id/view_send_bg" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/view_send_bg"
+        app:layout_constraintLeft_toRightOf="@id/iv_back"
+        app:layout_constraintRight_toLeftOf="@id/tv_send"
+        app:layout_constraintTop_toTopOf="@id/view_send_bg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

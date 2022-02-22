@@ -1,2 +1,2 @@
 # TrunPageActivityTransition
-仿小说类APP（起点），打开书籍的Activity过场动画
+仿小说类APP，打开书籍的Activity过场动画

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".openbook.OpenBookAnimationActivity">
+
+    <TextView
+        android:id="@+id/tv_book"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:onClick="start"
+        android:background="@mipmap/img" />
+</LinearLayout>

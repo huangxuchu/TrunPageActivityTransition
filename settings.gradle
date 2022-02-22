@@ -1,0 +1,13 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' } // 添加阿里云 maven 地址
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' } // 添加阿里云 maven 地址
+
+        google()
+        mavenCentral()
+         // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "LearnActivityTransitionAnimation"
+include ':app'
